@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="main">
+            <div class="your-class">
+                <div class="s1">
+                    <video autoplay muted controls
+                        src="http://h.vod.cgv.co.kr:80/vodCGVa/86157/86157_211325_1200_128_960_540.mp4"></video>
+                </div>
+                <div class="s2">
+                    <video autoplay muted controls
+                        src="http://h.vod.cgv.co.kr:80/vodCGVa/86720/86720_210669_1200_128_960_540.mp4"></video>
+                </div>
+                <div class="s3">
+                    <video autoplay muted controls
+                        src="http://h.vod.cgv.co.kr:80/vodCGVa/86689/86689_210424_1200_128_960_540.mp4"></video>
+                </div>
+                <!-- autoplay자동재생 muted 음소거 자동재생은 정책적으로 소리로인해 자동재생을 넣어도 안됨 그래서 뮤티드를 넣어줘야 자동재생됨,controls 컨트롤바 생성 -->
+            </div>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.your-class').slick({
+                //setting-name: setting-value
+                autoplay:true,
+                dots:true,
+                fade:true
+
+            });
+        });
+    </script>
+</body>
+
+</html>

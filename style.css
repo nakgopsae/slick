@@ -1,0 +1,77 @@
+@charset "UTF-8";
+li{
+    list-style: none;
+}
+.wrap {
+    width: 800px;
+    margin: 100px auto 0;
+}
+
+.wrap .main {}
+
+.wrap .main .your-class {
+    height: 420px;
+}
+
+.wrap .main .your-class .slick-slide {
+    height: 420px;
+}
+
+.wrap .main .your-class .slick-slide video {
+    width: 100%;
+    /* 비디오는 이미지와달리 비율을 알아서 잡아줌 비디오는 백그라운드 안되고 포지션 앱솔루트로 백그라운드 비스무리하게 만들어줘야함 */
+
+}
+
+.wrap .main .your-class .slick-arrow{
+    position: absolute;
+    top: calc(50% - 10px);    
+    font-size: 0; /* 기본값은 16px인데 쿠름에서는 최소폰트크기가
+    10px이기 때문에 10px이하는 적용이안됨,슬릭 폰트 기본값 초기화*/
+    visibility: hidden;
+}
+.wrap .main .your-class .slick-prev{
+    z-index: 5;/* 젤 밑에깔림 이유? */
+    left: 5%;/* 부모에게서 왼쪽에서 5프로떨어지겠다 */
+    
+}
+.wrap .main .your-class .slick-prev::after{
+    content: "\f053";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 30px;/* 폰트 부모 따라감 없앴으면 다시적기 */
+    color: aliceblue;
+}
+.wrap .main .your-class .slick-next{
+    right: 5%;/* 부모에게서 오른쪽에서부터 5프로떨어지겠다 */
+}
+.wrap .main .your-class .slick-next::after{
+    content: "\f054";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    visibility: visible;
+    font-size: 30px;
+    color: aliceblue;
+}
+.wrap .main .your-class .slick-dots{
+    text-align: center; /* 인라인이 되었기때문에 가운데 정렬을 쓸수 있음 */
+}
+.wrap .main .your-class .slick-dots li{
+    display: inline-block;/* 인라인인데 블록처럼 영역차지해라 */
+    margin: 20px 5px 0;
+}
+.wrap .main .your-class .slick-dots li button{
+    border: none; /* 테두리 없애고 폰트사이즈없애고 넓이와 높이를 주고 테두리를 둥글게 만들고 배경을 바꾸고 액티브의 움직임을 자연스럽게 하기위해 변화하는시간을 0.3초준다 */
+    font-size: 0;
+    width: 15px; height: 15px;
+    border-radius: 50%;
+    background-color: #999;
+    transition: 0.3s;
+}
+.wrap .main .your-class .slick-dots li.slick-active button{
+    background-color: black;
+    width: 20px;
+    border-radius: 8px;
+    
+}
